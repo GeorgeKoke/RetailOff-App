@@ -11,8 +11,8 @@
     <ion-card>
         <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
         <ion-card-header>
-          <ion-card-title color="primary">Bienvenido a RETAIL OFF!</ion-card-title>
-          <ion-card-subtitle>20 Años de Trayectoria en la Industria Comercial</ion-card-subtitle>
+          <ion-card-title id="light-header-title">Bienvenido a RETAIL OFF!</ion-card-title>
+          <ion-card-subtitle id="light-header-subtitle">20 Años de Trayectoria en la Industria Comercial</ion-card-subtitle>
         </ion-card-header>
       
         <ion-card-content>
@@ -20,10 +20,69 @@
         </ion-card-content>
     </ion-card>
 
+    <ion-toolbar color="primary">
+        <ion-label>Nuestros Proyectos</ion-label>
+      </ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="3" size-xs="6">
+            <ion-card color="tertiary" class="proyect-card">
+              <ion-card-header>
+                <ion-card-title>Proyecto 1</ion-card-title>
+                <ion-card-subtitle>Descripcion Proyecto 1</ion-card-subtitle>
+              </ion-card-header>
+            
+              <ion-card-content>
+                Card Content
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+    
+          <ion-col size-md="3" size-xs="6">
+            <ion-card color="tertiary" class="proyect-card">
+              <ion-card-header>
+                <ion-card-title>Proyecto 2</ion-card-title>
+                <ion-card-subtitle>Descripcion Proyecto 2</ion-card-subtitle>
+              </ion-card-header>
+            
+              <ion-card-content>
+                Card Content
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+    
+          <ion-col size-md="3" size-xs="6">
+            <ion-card color="tertiary" class="proyect-card">
+              <ion-card-header>
+                <ion-card-title>Proyecto 3</ion-card-title>
+                <ion-card-subtitle>Descripcion Proyecto 3</ion-card-subtitle>
+              </ion-card-header>
+            
+              <ion-card-content>
+                Card Content
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+    
+          <ion-col size-md="3" size-xs="6">
+            <ion-card color="tertiary" class="proyect-card">
+              <ion-card-header>
+                <ion-card-title>Proyecto 4</ion-card-title>
+                <ion-card-subtitle>Descripcion Proyecto 4</ion-card-subtitle>
+              </ion-card-header>
+            
+              <ion-card-content>
+                Card Content
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
     <ion-card>
         <ion-button routerLink="/login">Iniciar Sesion</ion-button>
         <ion-button routerLink="/user-register">Registrarse</ion-button>
-        <ion-button routerLink="/dashboard">Ingresar como Invitado</ion-button>
+        <ion-button routerLink="/dashboard">Invitado</ion-button>
     </ion-card>
 
 </ion-content>

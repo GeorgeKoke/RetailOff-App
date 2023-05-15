@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +15,17 @@ export class AppComponent {
     {title: 'Login', url: '/login', icon: 'log-in'},
     {title: 'Register', url: '/user-register', icon: 'person-add'},
   ];
-  constructor(){}
+  constructor(
+    public alertController: AlertController,
+    public route: Router
+  ){}
+
+  async showAlert(header:string, message:string){
+    const alert = await this.alertController.create({
+      header,
+      message,
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
 }

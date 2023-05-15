@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { AlertController, IonicModule } from '@ionic/angular';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-user-register',
@@ -18,7 +18,7 @@ export class UserRegisterComponent {
 
   constructor(
     public afAuth: Auth,
-    public alertController: AlertController,
+    public app: AppComponent,
     public route: Router
   ){}
 
@@ -27,29 +27,20 @@ export class UserRegisterComponent {
   async register(){
     const {username, email,password,cpassword} = this
     if(password !== cpassword){
-      this.showAlert("Error", "Las contraseñas no coinciden")
+      this.app.showAlert("Error", "Las contraseñas no coinciden")
     }else{
       try{
         const res = await createUserWithEmailAndPassword(this.afAuth,email,password);
-        this.showAlert("Usuario Registrado", `Bienvenido ${username}, ya puedes iniciar sesion`);
+        this.app.showAlert("Usuario Registrado", `Bienvenido ${username}, ya puedes iniciar sesion`);
         this.route.navigate(['login'])
       }catch(err){
         console.dir(err);
         if(typeof err === 'string'){
-          this.showAlert("Error", err);
+          this.app.showAlert("Error", err);
         }else if(err instanceof Error){
-          this.showAlert("Error", err.message);
+          this.app.showAlert("Error", err.message);
         }
       }
     }
-  }
-
-  async showAlert(header:string, message:string){
-    const alert = await this.alertController.create({
-      header,
-      message,
-      buttons: ['OK']
-    });
-    await alert.present();
   }
 }

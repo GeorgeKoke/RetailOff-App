@@ -8,5 +8,72 @@
 </ion-header>
 
 <ion-content>
-    
+    <ion-card>
+        <ion-card-header>
+          <ion-toolbar color="retail">
+            <ion-card-title>Bienvenido! </ion-card-title>
+          </ion-toolbar>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-textarea class="ion-form-item" [readonly]="true" label="Nombre" labelPlacement="stacked" fill="outline" value="Juan Perez"></ion-textarea>
+          <ion-textarea class="ion-form-item" [readonly]="true" label="Usuario" labelPlacement="stacked" fill="outline" value="@juan_perez"></ion-textarea>
+          <ion-textarea class="ion-form-item" [readonly]="true" label="Email" labelPlacement="stacked" fill="outline" type="email" value="juanito89@gmail.com"></ion-textarea>
+          <ion-textarea class="ion-form-item" [readonly]="true" label="Contraseña" labelPlacement="stacked" fill="outline" type="password" value="*******"></ion-textarea>
+        </ion-card-content>
+
+        <ion-toolbar color="primary">
+            <ion-label>Balance de la Cuenta</ion-label>
+          </ion-toolbar>
+          <ion-grid>
+            <ion-row>
+              <ion-col size-md="3" size-xs="12">
+                <ion-card color="tertiary" class="proyect-card">
+                  <ion-card-header>
+                    <ion-card-title>Saldo de la Cuenta</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    <ion-item>
+                        <ion-icon name="cash" slot="start"></ion-icon>
+                        <ion-label>$1.000.000 CLP</ion-label>
+                        <ion-icon name="information-circle" slot="end"></ion-icon>
+                    </ion-item>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+        
+              <ion-col size-md="3" size-xs="12">
+                <ion-card color="tertiary" class="proyect-card">
+                  <ion-card-header>
+                    <ion-card-title>Ultimos Movimientos</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    <ion-list lines="full">
+                        <ion-item>
+                          <ion-label>Compra Mercadolibre</ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label>Recepción de Dinero</ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label>Compra en Mercadolibre</ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label>Transferencia a otros Bancos</ion-label>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label>Transferencia a otros Bancos</ion-label>
+                        </ion-item>
+                      </ion-list>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-card>
 </ion-content>
