@@ -9,6 +9,12 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UserRegisterComponent } from './pages/user-register/user-register.component';
 import { IonicModule } from '@ionic/angular';
 
+import firebaseConfig from 'src/environments/firebase';
+import {provideFirebaseApp, initializeApp, getApp} from '@angular/fire/app' ;
+import {getAuth, provideAuth} from '@angular/fire/auth';
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +26,11 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    provideFirebaseApp(()=> initializeApp(firebaseConfig)),
+    provideAuth(()=> getAuth()),
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
