@@ -1,0 +1,7 @@
+{
+  "name": "Retail-App-v2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

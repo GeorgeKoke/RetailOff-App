@@ -13,6 +13,10 @@ import firebaseConfig from 'src/environments/firebase';
 import {provideFirebaseApp, initializeApp, getApp} from '@angular/fire/app' ;
 import {getAuth, provideAuth} from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
+import { HistorialScanComponent } from './pages/historial-scan/historial-scan.component';
+import { ScanComponent } from './pages/scan/scan.component';
+import { MapComponent } from './pages/map/map.component';
+import { NavscanComponent } from './pages/navscan/navscan.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     DashboardComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    HistorialScanComponent,
+    ScanComponent,
+    MapComponent,
+    NavscanComponent
   ],
   imports: [
     BrowserModule,
