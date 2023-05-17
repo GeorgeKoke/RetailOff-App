@@ -14,6 +14,7 @@ export class AppComponent {
     {title: 'Dashboard', url: '/dashboard', icon: 'pie-chart'},
     {title: 'Login', url: '/login', icon: 'log-in'},
     {title: 'Register', url: '/user-register', icon: 'person-add'},
+    {title: 'NavScan', url: '/navscan', icon: 'scan'},
   ];
   constructor(
     public alertController: AlertController,

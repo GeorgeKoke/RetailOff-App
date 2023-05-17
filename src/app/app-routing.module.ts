@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UserRegisterComponent } from './pages/user-register/user-register.component';
+import { NavscanComponent } from './pages/navscan/navscan.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,26 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'navscan',
+    component: NavscanComponent,
+    children:[
+      {
+        path:'',
+        pathMatch:'full',
+        redirectTo: 'scan',
+      },
+      {
+        path:'scan',
+        loadChildren:()=> import('./pages/scan/scan.module').then((m)=>m.ScanModule),
+      },
+      {
+        path:'historial-scan',
+        loadChildren:()=> import('./pages/historial-scan/historial-scan.module').then((m)=>m.HistorialScanModule),
+      },
+      
+    ],
   },
 ];
 
